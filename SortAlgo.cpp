@@ -1,4 +1,4 @@
-#include "Header.h"
+#include "Header.hpp"
 #include <cstring>
 using namespace std;
 
@@ -44,7 +44,7 @@ void SelectionSort_time(int a[], int n, double& time_taken)
 		swap(a[i], a[minIdx]);
 	}
 	end = clock();
-	time_taken = double(end) - double(start);
+	time_taken = ((double(end) - double(start))/CLOCKS_PER_SEC)*1000;
 }	
 int partition_time(int a[], int left, int right)
 {
@@ -124,7 +124,7 @@ TailRecurse:	//To advoid Stack overflow when large data
 		}
 	}
 	end = clock();
-	time_taken = double(end) - double(start);
+	time_taken = ((double(end) - double(start))/CLOCKS_PER_SEC)*1000;
 }
 
 void countingSort_time(int a[], int n, double& time_taken)
@@ -157,7 +157,7 @@ void countingSort_time(int a[], int n, double& time_taken)
 	delete[]b;
 	delete[]count_arr;
 	end = clock();
-	time_taken = double(end) - double(start);
+	time_taken = ((double(end) - double(start))/CLOCKS_PER_SEC)*1000;
 }
 void countingSort_comp(int a[], int n, double& count_comp)
 {
@@ -212,7 +212,7 @@ void insertionSortTimeTaken(int a[], int n, double& time_taken) {
         a[j + 1] = v;
     }
     end = clock();
-    time_taken = double(end) - double(start);
+    time_taken = ((double(end) - double(start))/CLOCKS_PER_SEC)*1000;
 }
 
 void heaperCountCompare(int a[], int n, int i, double& count_compare) {
@@ -273,7 +273,7 @@ void heapSortTimeTaken(int a[], int n, double& time_taken) {
         heaper(a, i, 0);
     }
     end = clock();
-    time_taken = double(end) - double(start);
+    time_taken = ((double(end) - double(start))/CLOCKS_PER_SEC)*1000;
 }
 
 void flashSortCountCompare(int a[], int n, double& count_compare) {
@@ -404,7 +404,7 @@ void flashSortTimeTaken(int a[], int n, double& time_taken) {
 		a[j + 1] = v;
 	}
 	end = clock();
-	time_taken = double(end) - double(start);
+	time_taken = ((double(end) - double(start))/CLOCKS_PER_SEC)*1000;
 }
 
 void countSort(int a[], int n, int exp)
@@ -442,7 +442,7 @@ void radixSortTimeTaken(int a[], int n, double& time_taken)
 	for (int exp = 1; maxArr / exp > 0; exp *= 10)
 		countSort(a, n, exp);
 	end = clock();
-	time_taken = double(end) - double(start);
+	time_taken = ((double(end) - double(start))/CLOCKS_PER_SEC)*1000;
 }
 
 void countSortCountCompare(int a[], int n, int exp, double& count_compare)
@@ -501,7 +501,7 @@ void bubbleSortTimeTaken(int a[], int n, double& time_taken)
 		}
 	}
 	end = clock();
-	time_taken = double(end) - double(start);
+	time_taken = ((double(end) - double(start))/CLOCKS_PER_SEC)*1000;
 }
 
 void shellSortCountCompare(int a[], int n, double& count_compare)
@@ -535,7 +535,7 @@ void shellSortTimeTaken(int a[], int n, double& time_taken)
 		}
 	}
 	end = clock();
-	time_taken = double(end) - double(start);
+	time_taken = ((double(end) - double(start))/CLOCKS_PER_SEC)*1000;
 }
 
 //Source: https://codelearn.io/learning/cau-truc-du-lieu-va-giai-thuat/853804
@@ -642,7 +642,7 @@ void mergeSortTimeTaken(int a[], int l, int r, double& time_taken)
 		mergeTimeTaken(a, l, m, r);
 	}
 	end = clock();
-	time_taken = (double(end) - double(start));
+	time_taken = ((double(end) - double(start))/CLOCKS_PER_SEC)*1000;
 }
 
 
@@ -718,5 +718,5 @@ void shakerSortTimeTaken(int a[], int n, double& time_taken)
 		left = k;
 	}
 	end = clock();
-	time_taken = double(end) - double(start);
+	time_taken = ((double(end) - double(start))/CLOCKS_PER_SEC)*1000;
 }

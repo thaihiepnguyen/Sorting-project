@@ -1,4 +1,4 @@
-﻿#include "Header.h"
+#include "Header.hpp"
 #include <cstring>
 using namespace std;
 
@@ -545,176 +545,220 @@ int main(int argc, char* argv[]) {
 			if (strcmp(argv[2], "selection-sort") == 0)
 			{
 				int* b = new int[n];
+				int* c = new int[n];
+				memcpy(c, a, n * sizeof(int));
 				memcpy(b, a, n * sizeof(int));
-				SelectionSort_time(a, n, time_taken4);
+				SelectionSort_time(c, n, time_taken4);
 				SelectionSort_comp(b, n, count_compare4);
 				delete[]b;
 			}
 			if (strcmp(argv[3], "selection-sort") == 0)
 			{
 				int* b = new int[n];
+				int* c = new int[n];
+				memcpy(c, a, n * sizeof(int));
 				memcpy(b, a, n * sizeof(int));
-				SelectionSort_time(a, n, time_taken5);
+				SelectionSort_time(c, n, time_taken5);
 				SelectionSort_comp(b, n, count_compare5);
 				delete[]b;
 			}
 			if (strcmp(argv[2], "quick-sort") == 0)
 			{
 				int* b = new int[n];
+				int* c = new int[n];
+				memcpy(c, a, n * sizeof(int));
 				memcpy(b, a, n * sizeof(int));
-				quickSort_time(a, 0, n - 1, time_taken4);
+				quickSort_time(c, 0, n - 1, time_taken4);
 				quickSort_comp(b, 0, n - 1, count_compare4);
 				delete[]b;
 			}
 			if (strcmp(argv[3], "quick-sort") == 0)
 			{
 				int* b = new int[n];
+				int* c = new int[n];
+				memcpy(c, a, n * sizeof(int));
 				memcpy(b, a, n * sizeof(int));
-				quickSort_time(a, 0, n - 1, time_taken5);
+				quickSort_time(c, 0, n - 1, time_taken5);
 				quickSort_comp(b, 0, n - 1, count_compare5);
 				delete[]b;
 			}
 			if (strcmp(argv[2], "counting-sort") == 0)
 			{
 				int* b = new int[n];
+				int* c = new int[n];
+				memcpy(c, a, n * sizeof(int));
 				memcpy(b, a, n * sizeof(int));
-				countingSort_time(a, n, time_taken4);
+				countingSort_time(c, n, time_taken4);
 				countingSort_comp(b, n, count_compare4);
 				delete[]b;
 			}
 			if (strcmp(argv[3], "counting-sort") == 0)
 			{
 				int* b = new int[n];
+				int* c = new int[n];
+				memcpy(c, a, n * sizeof(int));
 				memcpy(b, a, n * sizeof(int));
-				countingSort_time(a, n, time_taken5);
+				countingSort_time(c, n, time_taken5);
 				countingSort_comp(b, n, count_compare5);
 				delete[]b;
 			}
 			if (strcmp(argv[2], "insertion-sort") == 0)
 			{
 				int* b = new int[n];
+				int* c = new int[n];
+				memcpy(c, a, n * sizeof(int));
 				memcpy(b, a, n * sizeof(int));
-				insertionSortTimeTaken(a, n, time_taken4);
+				insertionSortTimeTaken(c, n, time_taken4);
 				insertionSortCountCompare(b, n, count_compare4);
 				delete[]b;
 			}
 			if (strcmp(argv[3], "insertion-sort") == 0)
 			{
 				int* b = new int[n];
+				int* c = new int[n];
+				memcpy(c, a, n * sizeof(int));
 				memcpy(b, a, n * sizeof(int));
-				insertionSortTimeTaken(a, n, time_taken5);
+				insertionSortTimeTaken(c, n, time_taken5);
 				insertionSortCountCompare(b, n, count_compare5);
 				delete[]b;
 			}
 			if (strcmp(argv[2], "heap-sort") == 0)
 			{
 				int* b = new int[n];
+				int* c = new int[n];
+				memcpy(c, a, n * sizeof(int));
 				memcpy(b, a, n * sizeof(int));
-				heapSortTimeTaken(a, n, time_taken4);
+				heapSortTimeTaken(c, n, time_taken4);
 				heapSortCountCompare(b, n, count_compare4);
 				delete[]b;
 			}
 			if (strcmp(argv[3], "heap-sort") == 0)
 			{
 				int* b = new int[n];
+				int* c = new int[n];
+				memcpy(c, a, n * sizeof(int));
 				memcpy(b, a, n * sizeof(int));
-				heapSortTimeTaken(a, n, time_taken5);
+				heapSortTimeTaken(c, n, time_taken5);
 				heapSortCountCompare(b, n, count_compare5);
 				delete[]b;
 			}
 			if (strcmp(argv[2], "flash-sort") == 0)
 			{
 				int* b = new int[n];
+				int* c = new int[n];
+				memcpy(c, a, n * sizeof(int));
 				memcpy(b, a, n * sizeof(int));
-				flashSortTimeTaken(a, n, time_taken);
-				flashSortCountCompare(b, n, count_compare);
+				flashSortTimeTaken(c, n, time_taken4);
+				flashSortCountCompare(b, n, count_compare4);
 				delete[]b;
 			}
 			if (strcmp(argv[3], "flash-sort") == 0)
 			{
 				int* b = new int[n];
+				int* c = new int[n];
+				memcpy(c, a, n * sizeof(int));
 				memcpy(b, a, n * sizeof(int));
-				flashSortTimeTaken(a, n, time_taken);
-				flashSortCountCompare(b, n, count_compare);
+				flashSortTimeTaken(c, n, time_taken5);
+				flashSortCountCompare(b, n, count_compare5);
 				delete[]b;
 			}
 			if (strcmp(argv[2], "radix-sort") == 0)
 			{
 				int* b = new int[n];
+				int* c = new int[n];
+				memcpy(c, a, n * sizeof(int));
 				memcpy(b, a, n * sizeof(int));
-				radixSortTimeTaken(a, n, time_taken4);
+				radixSortTimeTaken(c, n, time_taken4);
 				radixSortCountCompare(b, n, count_compare4);
 				delete[]b;
 			}
 			if (strcmp(argv[3], "radix-sort") == 0)
 			{
 				int* b = new int[n];
+				int* c = new int[n];
+				memcpy(c, a, n * sizeof(int));
 				memcpy(b, a, n * sizeof(int));
-				radixSortTimeTaken(a, n, time_taken5);
+				radixSortTimeTaken(c, n, time_taken5);
 				radixSortCountCompare(b, n, count_compare5);
 				delete[]b;
 			}
 			if (strcmp(argv[2], "bubble-sort") == 0)
 			{
 				int* b = new int[n];
+				int* c = new int[n];
+				memcpy(c, a, n * sizeof(int));
 				memcpy(b, a, n * sizeof(int));
-				bubbleSortTimeTaken(a, n, time_taken4);
+				bubbleSortTimeTaken(c, n, time_taken4);
 				bubbleSortCountCompare(b, n, count_compare4);
 				delete[]b;
 			}
 			if (strcmp(argv[3], "bubble-sort") == 0)
 			{
 				int* b = new int[n];
+				int* c = new int[n];
+				memcpy(c, a, n * sizeof(int));
 				memcpy(b, a, n * sizeof(int));
-				bubbleSortTimeTaken(a, n, time_taken5);
+				bubbleSortTimeTaken(c, n, time_taken5);
 				bubbleSortCountCompare(b, n, count_compare5);
 				delete[]b;
 			}
 			if (strcmp(argv[2], "shell-sort") == 0)
 			{
 				int* b = new int[n];
+				int* c = new int[n];
+				memcpy(c, a, n * sizeof(int));
 				memcpy(b, a, n * sizeof(int));
-				shellSortTimeTaken(a, n, time_taken4);
+				shellSortTimeTaken(c, n, time_taken4);
 				shellSortCountCompare(b, n, count_compare4);
 				delete[]b;
 			}
 			if (strcmp(argv[3], "shell-sort") == 0)
 			{
 				int* b = new int[n];
+				int* c = new int[n];
+				memcpy(c, a, n * sizeof(int));
 				memcpy(b, a, n * sizeof(int));
-				shellSortTimeTaken(a, n, time_taken5);
+				shellSortTimeTaken(c, n, time_taken5);
 				shellSortCountCompare(b, n, count_compare5);
 				delete[]b;
 			}
 			if (strcmp(argv[2], "merge-sort") == 0)
 			{
 				int* b = new int[n];
+				int* c = new int[n];
+				memcpy(c, a, n * sizeof(int));
 				memcpy(b, a, n * sizeof(int));
-				mergeSortTimeTaken(a, 0, n - 1, time_taken4);
+				mergeSortTimeTaken(c, 0, n - 1, time_taken4);
 				mergeSortCountCompare(b, 0, n - 1, count_compare4);
 				delete[]b;
 			}
 			if (strcmp(argv[3], "merge-sort") == 0)
 			{
 				int* b = new int[n];
+				int* c = new int[n];
+				memcpy(c, a, n * sizeof(int));
 				memcpy(b, a, n * sizeof(int));
-				mergeSortTimeTaken(a, 0, n - 1, time_taken5);
+				mergeSortTimeTaken(c, 0, n - 1, time_taken5);
 				mergeSortCountCompare(b, 0, n - 1, count_compare5);
 				delete[]b;
 			}
 			if (strcmp(argv[2], "shaker-sort") == 0)
 			{
 				int* b = new int[n];
+				int* c = new int[n];
+				memcpy(c, a, n * sizeof(int));
 				memcpy(b, a, n * sizeof(int));
-				shakerSortTimeTaken(a, n, time_taken4);
+				shakerSortTimeTaken(c, n, time_taken4);
 				shakerSortCountCompare(b, n, count_compare4);
 				delete[]b;
 			}
 			if (strcmp(argv[3], "shaker-sort") == 0)
 			{
 				int* b = new int[n];
+				int* c = new int[n];
+				memcpy(c, a, n * sizeof(int));
 				memcpy(b, a, n * sizeof(int));
-				shakerSortTimeTaken(a, n, time_taken5);
+				shakerSortTimeTaken(c, n, time_taken5);
 				shakerSortCountCompare(b, n, count_compare5);
 				delete[]b;
 			}
