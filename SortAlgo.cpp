@@ -481,10 +481,10 @@ void radixSortCountCompare(int a[], int n, double& count_compare)
 void bubbleSortCountCompare(int a[], int n, double& count_compare)
 {
 	count_compare = 0;
-	for (int i = 0; ++count_compare && i < n; i++) {
-		for (int j = 0; ++count_compare && j < n - i; j++) {
-			if (++count_compare && a[i] < a[j])
-				swap(a[i], a[j]);
+	for (int i = 1; ++count_compare && i < n; i++) {
+		for (int j = n-1; ++count_compare && j >= i; j--) {
+			if (++count_compare && a[j] < a[j-1])
+				swap(a[j], a[j-1]);
 		}
 	}
 }
@@ -494,10 +494,10 @@ void bubbleSortTimeTaken(int a[], int n, double& time_taken)
 	time_taken = 0;
 	clock_t start, end;
 	start = clock();
-	for (int i = 0; i < n; i++) {
-		for (int j = 0; j < n - i; j++) {
-			if (a[i] < a[j])
-				swap(a[i], a[j]);
+	for (int i = 1;i < n; i++) {
+		for (int j = n-1; j >= i; j--) {
+			if (a[j] < a[j-1])
+				swap(a[j], a[j-1]);
 		}
 	}
 	end = clock();
