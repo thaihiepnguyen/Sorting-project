@@ -3,6 +3,7 @@
 - Made with C/C++
 - Includes Selection Sort, Insertion Sort, Bubble Sort, Shaker Sort, Shell Sort, Heap
   Sort, Merge Sort, Quick Sort, Counting Sort, Radix Sort, and Flash Sort.
+- This is a Project of **Data Structures & Algorithms Subject**
 
 # Requirements
 
